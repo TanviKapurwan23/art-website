@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tanvi Kapurwan — Original Art & Creative Commissions</title>
+    <meta
+      name="description"
+      content="Original hand-painted art, custom canvas commissions and creative services by Tanvi Kapurwan."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #17130f;
+        --cream: #f7f1e8;
+        --paper: #fffaf3;
+        --gold: #b48742;
+        --muted: #74695e;
+        --line: #dfd2c1;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--cream);
+        color: var(--ink);
+        font-family: "DM Sans", sans-serif;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .wrap {
+        max-width: 1180px;
+        margin: auto;
+        padding: 0 28px;
+      }
+      nav {
+        height: 78px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--line);
+        position: sticky;
+        top: 0;
+        background: rgba(247, 241, 232, 0.94);
+        backdrop-filter: blur(12px);
+        z-index: 10;
+      }
+      .logo {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 29px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+      .logo span {
+        color: var(--gold);
+      }
+      .links {
+        display: flex;
+        gap: 30px;
+        font-size: 14px;
+      }
+      .links a:hover {
+        color: var(--gold);
+      }
+      .hero {
+        min-height: 660px;
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        align-items: center;
+        gap: 60px;
+        padding: 72px 0;
+      }
+      .kicker {
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        font-size: 12px;
+        color: var(--gold);
+        font-weight: 600;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Cormorant Garamond", serif;
+        margin: 0;
+      }
+      h1 {
+        font-size: 76px;
+        line-height: 0.92;
+        font-weight: 600;
+        margin: 18px 0 25px;
+      }
+      h1 em {
+        font-weight: 500;
+        color: var(--gold);
+      }
+      .hero p {
+        font-size: 17px;
+        line-height: 1.8;
+        color: var(--muted);
+        max-width: 530px;
+      }
+      .ctas {
+        display: flex;
+        gap: 12px;
+        margin-top: 32px;
+        flex-wrap: wrap;
+      }
+      .btn {
+        padding: 14px 21px;
+        border: 1px solid var(--ink);
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        display: inline-block;
+      }
+      .btn.dark {
+        background: var(--ink);
+        color: white;
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+      .hero-art {
+        position: relative;
+        background: #e6d9c7;
+        padding: 20px;
+        box-shadow: 18px 18px 0 #d2b98e;
+      }
+      .hero-art img {
+        display: block;
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        object-position: center;
+      }
+      .badge {
+        position: absolute;
+        right: -20px;
+        bottom: 28px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        padding: 15px 18px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 19px;
+      }
+      .section {
+        padding: 95px 0;
+      }
+      .section.alt {
+        background: var(--paper);
+      }
+      .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        margin-bottom: 34px;
+      }
+      .head h2 {
+        font-size: 52px;
+      }
+      .head p {
+        max-width: 420px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+      }
+      .card {
+        background: white;
+        border: 1px solid var(--line);
+        overflow: hidden;
+      }
+      .card img {
+        width: 100%;
+        height: 390px;
+        object-fit: cover;
+      }
+      .card-body {
+        padding: 22px;
+      }
+      .card h3 {
+        font-size: 28px;
+      }
+      .meta {
+        font-size: 12px;
+        color: var(--muted);
+        margin: 7px 0 18px;
+      }
+      .price {
+        font-weight: 600;
+        color: var(--gold);
+      }
+      .services {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+      .service {
+        padding: 30px;
+        background: var(--cream);
+        border: 1px solid var(--line);
+        min-height: 190px;
+      }
+      .num {
+        font-size: 12px;
+        color: var(--gold);
+        letter-spacing: 0.15em;
+      }
+      .service h3 {
+        font-size: 29px;
+        margin: 17px 0 10px;
+      }
+      .service p {
+        color: var(--muted);
+        line-height: 1.65;
+        font-size: 14px;
+      }
+      .story {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 70px;
+        align-items: center;
+      }
+      .quote {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 44px;
+        line-height: 1.08;
+      }
+      .story p {
+        color: var(--muted);
+        line-height: 1.8;
+      }
+      .contact {
+        background: var(--ink);
+        color: white;
+      }
+      .contact .kicker {
+        color: #d7b679;
+      }
+      .contact h2 {
+        font-size: 62px;
+        max-width: 720px;
+      }
+      .contact p {
+        color: #c7beb2;
+        line-height: 1.8;
+        max-width: 600px;
+      }
+      .contact .btn {
+        border-color: white;
+      }
+      .contact .btn.dark {
+        background: white;
+        color: var(--ink);
+      }
+      footer {
+        padding: 26px 0;
+        font-size: 12px;
+        color: var(--muted);
+        display: flex;
+        justify-content: space-between;
+      }
+      @media (max-width: 800px) {
+        .links {
+          display: none;
+        }
+        .hero {
+          grid-template-columns: 1fr;
+          padding: 55px 0;
+        }
+        .hero-art {
+          order: -1;
+        }
+        .hero-art img {
+          height: 380px;
+        }
+        h1 {
+          font-size: 58px;
+        }
+        .grid,
+        .services,
+        .story {
+          grid-template-columns: 1fr;
+        }
+        .section {
+          padding: 70px 0;
+        }
+        .head {
+          display: block;
+        }
+        .head h2 {
+          font-size: 44px;
+          margin-bottom: 12px;
+        }
+        .contact h2 {
+          font-size: 48px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div
+        class="wrap"
+        style="
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        "
+      >
+        <a class="logo" href="#">Tanvi <span>Kapurwan</span></a>
+        <div class="links">
+          <a href="#collection">Art</a><a href="#services">Commissions</a
+          ><a href="#about">About</a><a href="#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero wrap">
+        <div>
+          <div class="kicker">Artist · Creator · Storyteller</div>
+          <h1>Art that feels<br /><em>alive.</em></h1>
+          <p>
+            Original hand-painted canvases, expressive sketches and custom
+            artwork created with detail, colour and a little bit of soul.
+          </p>
+          <div class="ctas">
+            <a class="btn dark" href="#collection">Explore the collection</a
+            ><a class="btn" href="#contact">Commission a piece</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img
+            src="images/ganpati.PNG"
+            alt="Hand-painted Krishna and Radha artwork"
+          />
+          <div class="badge">Made by hand</div>
+        </div>
+      </section>
+
+      <section class="section alt" id="collection">
+        <div class="wrap">
+          <div class="head">
+            <div>
+              <div class="kicker">The collection</div>
+              <h2>Original works</h2>
+            </div>
+            <p>
+              One-of-a-kind pieces available to collect. For current
+              availability and pricing, send a message.
+            </p>
+          </div>
+          <div class="grid">
+            <article class="card">
+              <img
+                src="images/radha-krishna.PNG"
+                alt="Krishna and Radha painting"
+              />
+              <div class="card-body">
+                <h3>Divine Love</h3>
+                <div class="meta">Acrylic on canvas · Original</div>
+                <div class="price">Inquire to purchase →</div>
+              </div>
+            </article>
+            <article class="card">
+              <img
+                src="images/Ganesha-art.PNG"
+                alt="Ganesha painting with veena"
+              />
+              <div class="card-body">
+                <h3>Ganesha</h3>
+                <div class="meta">Hand-painted canvas · Original</div>
+                <div class="price">Inquire to purchase →</div>
+              </div>
+            </article>
+            <article class="card">
+              <img
+                src="images/hanumanji-art.PNG"
+                alt="Hanuman silhouette painting"
+              />
+              <div class="card-body">
+                <h3>Veer Hanuman</h3>
+                <div class="meta">Expressive canvas · Original</div>
+                <div class="price">Inquire to purchase →</div>
+              </div>
+            </article>
+            <article class="card">
+              <img src="images/flower.PNG" alt="Krishna and Radha painting" />
+              <div class="card-body">
+                <h3>Flower Vase</h3>
+                <div class="meta">Acrylic on canvas · Original</div>
+                <div class="price">Inquire to purchase →</div>
+              </div>
+            </article>
+            <article class="card">
+              <img
+                src="images/ganesha-ji.PNG"
+                alt="Ganesha painting with veena"
+              />
+              <div class="card-body">
+                <h3>Ganesha</h3>
+                <div class="meta">Hand-painted canvas · Original</div>
+                <div class="price">Inquire to purchase →</div>
+              </div>
+            </article>
+            <article class="card">
+              <img
+                src="images/butterfly.PNG"
+                alt="Hanuman silhouette painting"
+              />
+              <div class="card-body">
+                <h3>Butterfly</h3>
+                <div class="meta">Expressive canvas · Original</div>
+                <div class="price">Inquire to purchase →</div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="wrap">
+          <div class="head">
+            <div>
+              <div class="kicker">Work with me</div>
+              <h2>Creative services</h2>
+            </div>
+            <p>
+              Turn an idea, memory or mood into something you can keep, gift or
+              display.
+            </p>
+          </div>
+          <div class="services">
+            <div class="service">
+              <div class="num">01</div>
+              <h3>Custom Canvas</h3>
+              <p>
+                Personalised paintings for homes, gifts, milestones and special
+                spaces.
+              </p>
+            </div>
+            <div class="service">
+              <div class="num">02</div>
+              <h3>Portraits & Sketches</h3>
+              <p>
+                Detailed hand-drawn portraits and expressive pencil artwork made
+                to order.
+              </p>
+            </div>
+            <div class="service">
+              <div class="num">03</div>
+              <h3>Creative Projects</h3>
+              <p>
+                Collaborate on visual concepts, artwork and creator projects
+                that need a distinctive artistic touch.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="about">
+        <div class="wrap story">
+          <div>
+            <div class="kicker">The artist</div>
+            <div class="quote">
+              “I want every piece to carry a feeling, not just a frame.”
+            </div>
+          </div>
+          <div>
+            <p>
+              I’m Tanvi Kapurwan, a Delhi-based artist creating original
+              hand-painted art and custom commissions.
+            </p>
+            <p>
+              My work moves between vibrant Indian-inspired art, portraits,
+              sketches and expressive contemporary pieces. Every commission is
+              made with the person and the story behind it in mind.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="wrap">
+          <div class="kicker">Let’s create</div>
+          <h2>Have an idea for your wall, your home or someone you love?</h2>
+          <p>
+            Tell me what you have in mind. I’ll help you turn it into a custom
+            artwork.
+          </p>
+          <div class="ctas">
+            <a
+              class="btn dark"
+              href="https://www.instagram.com/art_ista2000/"
+              target="_blank"
+              rel="noopener"
+              >DM on Instagram</a
+            ><a class="btn" href="mailto:tanvi.kapurwan22@gmail.com"
+              >Email me</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div
+        class="wrap"
+        style="width: 100%; display: flex; justify-content: space-between"
+      >
+        <span>© 2026 Tanvi Kapurwan</span
+        ><span>Original art · Custom commissions</span>
+      </div>
+    </footer>
+  </body>
+</html>
